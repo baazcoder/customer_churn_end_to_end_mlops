@@ -90,3 +90,4 @@ jobs:
         run: |
           docker ps -a
           docker logs vehicle-app || true
+        
