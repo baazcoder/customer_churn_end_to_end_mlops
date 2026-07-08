@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:1300px;
+
+}
+
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#cbd5e1;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+label{
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    color:#e2e8f0;
+
+}
+
+input,
+select{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.1);
+
+    color:white;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+select option{
+
+    color:black;
+
+}
+
+input:focus,
+select:focus{
+
+    border:2px solid #60a5fa;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.btn{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(37,99,235,.5);
+
+}
+
+.result{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.1);
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.result h2{
+
+    margin-bottom:10px;
+
+}
+
+.result p{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#22c55e;
+
+}
+
+@media(max-width:900px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+}

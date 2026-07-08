@@ -1,0 +1,14 @@
+artifact
+logs
+notebook
+src.egg-info
+.env
+venv
+churn
+git
+.gitignore
+crashcourse.txt
+demo.py
+template.py
+README.md
+LICENSE

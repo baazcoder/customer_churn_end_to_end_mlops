@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="glass">
+
+        <h1>Customer Churn Prediction</h1>
+
+        <p class="subtitle">
+            End-to-End MLOps Project powered by XGBoost
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="grid">
+
+                <div class="input-box">
+                    <label>Gender</label>
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Senior Citizen</label>
+                    <select name="SeniorCitizen">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Partner</label>
+                    <select name="Partner">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Dependents</label>
+                    <select name="Dependents">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Tenure</label>
+                    <input type="number" name="tenure" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Phone Service</label>
+                    <select name="PhoneService">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Multiple Lines</label>
+                    <select name="MultipleLines">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No phone service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Internet Service</label>
+                    <select name="InternetService">
+                        <option>DSL</option>
+                        <option>Fiber optic</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Online Security</label>
+                    <select name="OnlineSecurity">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Online Backup</label>
+                    <select name="OnlineBackup">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Device Protection</label>
+                    <select name="DeviceProtection">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Tech Support</label>
+                    <select name="TechSupport">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Streaming TV</label>
+                    <select name="StreamingTV">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Streaming Movies</label>
+                    <select name="StreamingMovies">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Contract</label>
+                    <select name="Contract">
+                        <option>Month-to-month</option>
+                        <option>One year</option>
+                        <option>Two year</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Paperless Billing</label>
+                    <select name="PaperlessBilling">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Payment Method</label>
+                    <select name="PaymentMethod">
+                        <option>Electronic check</option>
+                        <option>Mailed check</option>
+                        <option>Bank transfer (automatic)</option>
+                        <option>Credit card (automatic)</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Monthly Charges</label>
+                    <input type="number" step="0.01" name="MonthlyCharges" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Total Charges</label>
+                    <input type="number" step="0.01" name="TotalCharges" required>
+                </div>
+
+            </div>
+
+            <button class="btn">
+                Predict Customer Churn
+            </button>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+
+            <h2>Prediction</h2>
+
+            <p>{{ prediction }}</p>
+
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
