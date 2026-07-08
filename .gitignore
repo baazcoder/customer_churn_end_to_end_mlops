@@ -3,10 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+mongo_credentials
+
 # C extensions
 *.so
-
-notebook
 
 # Distribution / packaging
 .Python
