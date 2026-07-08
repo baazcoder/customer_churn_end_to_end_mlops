@@ -64,8 +64,8 @@ jobs:
 
       - name: Remove Old Container
         run: |
-          docker stop vehicle-app || true
-          docker rm vehicle-app || true
+          docker stop churn-app || true
+          docker rm churn-app || true
 
       - name: Remove Old Image
         run: |
@@ -78,7 +78,7 @@ jobs:
       - name: Run Docker Container
         run: |
           docker run -d \
-            --name vehicle-app \
+            --name churn-app \
             -p 5000:5000 \
             -e AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
             -e AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
