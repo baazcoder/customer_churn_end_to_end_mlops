@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 mongo_credentials
-/notebook
+notebook/
 # C extensions
 *.so
 
